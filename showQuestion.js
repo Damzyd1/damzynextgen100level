@@ -20,367 +20,357 @@ let availableQuestion = [];
 */
  let questions = [
     {
-        question: "What is criminology primarily concerned with?",
-        choice1: "Crime investigation",
-        choice2: "The study of crime and criminal behavior",
-        choice3: "Law enforcement procedures",
-        choice4: "Criminal justice system structure",
-        answer: "The study of crime and criminal behavior",
-        rationale: "Criminology is the study of crime, its causes, and its effects."
+        question: "Who is considered the father of sociology?",
+        choice1: "Karl Marx",
+        choice2: "Auguste Comte",
+        choice3: "Émile Durkheim",
+        choice4: "Max Weber",
+        answer: "Auguste Comte",
+        rationale: "Auguste Comte coined the term 'sociology' and laid the foundation for its study."
     },
     {
-        question: "Which of the following is a major theory in criminology?",
-        choice1: "Biological Theory",
-        choice2: "Behavioral Theory",
-        choice3: "Structural Strain Theory",
-        choice4: "Psychological Theory",
-        answer: "Structural Strain Theory",
-        rationale: "Structural Strain Theory, proposed by Robert Merton, suggests that society sets goals without providing equal means to achieve them."
+        question: "Which of the following best defines sociology?",
+        choice1: "The study of individual behavior",
+        choice2: "The study of human society and social behavior",
+        choice3: "The study of past human societies",
+        choice4: "The study of economic systems",
+        answer: "The study of human society and social behavior",
+        rationale: "Sociology focuses on social structures, interactions, and cultural patterns."
     },
     {
-        question: "Which of the following refers to 'organized crime'?",
-        choice1: "Spontaneous acts of violence",
-        choice2: "Group crime that is structured and often involves illegal activities like drug trafficking",
-        choice3: "Individual crimes like theft or assault",
-        choice4: "Small-time street crime",
-        answer: "Group crime that is structured and often involves illegal activities like drug trafficking",
-        rationale: "Organized crime refers to a group of criminals who engage in illegal activities systematically, often for profit."
+        question: "What term describes the shared beliefs, values, and practices of a group?",
+        choice1: "Culture",
+        choice2: "Society",
+        choice3: "Norms",
+        choice4: "Institutions",
+        answer: "Culture",
+        rationale: "Culture encompasses the ideas, customs, and social behavior of a particular society."
     },
     {
-        question: "According to the social disorganization theory, crime occurs due to:",
-        choice1: "Weak family structures",
-        choice2: "Lack of social cohesion in a community",
-        choice3: "Biological influences on criminal behavior",
-        choice4: "Individuals' genetic predispositions",
-        answer: "Lack of social cohesion in a community",
-        rationale: "Social disorganization theory posits that crime occurs in communities with weak social structures or bonds."
+        question: "What is the term for the process by which individuals learn their society’s norms, values, and roles?",
+        choice1: "Acculturation",
+        choice2: "Socialization",
+        choice3: "Institutionalization",
+        choice4: "Assimilation",
+        answer: "Socialization",
+        rationale: "Socialization is the lifelong process of learning and internalizing societal expectations."
     },
     {
-        question: "Which theory of crime causation focuses on the differential association of individuals with criminals?",
-        choice1: "Labeling Theory",
-        choice2: "Routine Activities Theory",
-        choice3: "Differential Association Theory",
-        choice4: "Strain Theory",
-        answer: "Differential Association Theory",
-        rationale: "Differential Association Theory, proposed by Edwin Sutherland, suggests that criminal behavior is learned through interactions with others."
+        question: "Which of the following is NOT an agent of socialization?",
+        choice1: "Family",
+        choice2: "Media",
+        choice3: "Biology",
+        choice4: "Peers",
+        answer: "Biology",
+        rationale: "Socialization is influenced by social institutions, not biological factors."
     },
     {
-        question: "In criminology, which crime typology refers to a crime involving theft or property damage?",
-        choice1: "Violent Crime",
-        choice2: "Property Crime",
-        choice3: "White-Collar Crime",
-        choice4: "Organized Crime",
-        answer: "Property Crime",
-        rationale: "Property crime refers to offenses such as theft, burglary, and vandalism."
+        question: "Which sociologist introduced the concept of the 'looking-glass self'?",
+        choice1: "George Herbert Mead",
+        choice2: "Charles Horton Cooley",
+        choice3: "Émile Durkheim",
+        choice4: "Max Weber",
+        answer: "Charles Horton Cooley",
+        rationale: "Cooley’s 'looking-glass self' explains how self-identity is shaped by social interactions."
     },
     {
-        question: "The term 'victimology' refers to:",
-        choice1: "The study of crime victims and their role in criminal events",
-        choice2: "The study of criminal offenders",
-        choice3: "A criminological theory",
-        choice4: "The study of criminal law",
-        answer: "The study of crime victims and their role in criminal events",
-        rationale: "Victimology is the study of crime victims and how they are affected by crime."
+        question: "What term describes a group that strongly influences a person’s behavior and social identity?",
+        choice1: "Out-group",
+        choice2: "Reference group",
+        choice3: "Secondary group",
+        choice4: "Primary group",
+        answer: "Reference group",
+        rationale: "A reference group serves as a standard for evaluating oneself."
     },
     {
-        question: "Which of the following is considered a white-collar crime?",
-        choice1: "Robbery",
-        choice2: "Fraud",
-        choice3: "Murder",
-        choice4: "Assault",
-        answer: "Fraud",
-        rationale: "White-collar crime refers to non-violent crimes, typically committed by individuals in positions of trust, like fraud or embezzlement."
+        question: "Which type of group is characterized by close, personal, and enduring relationships?",
+        choice1: "Primary group",
+        choice2: "Secondary group",
+        choice3: "Out-group",
+        choice4: "Formal organization",
+        answer: "Primary group",
+        rationale: "Primary groups, like family and close friends, provide emotional support and long-term bonds."
     },
     {
-        question: "Which category of crime involves illegal acts committed by individuals or groups against the state or government?",
-        choice1: "Organized Crime",
-        choice2: "Political Crime",
-        choice3: "Property Crime",
-        choice4: "Victimless Crime",
-        answer: "Political Crime",
-        rationale: "Political crimes are illegal acts that are against the government, such as terrorism or espionage."
+        question: "What is the primary characteristic of a bureaucracy?",
+        choice1: "Flexibility",
+        choice2: "Hierarchical structure",
+        choice3: "Informal relationships",
+        choice4: "Lack of leadership",
+        answer: "Hierarchical structure",
+        rationale: "Bureaucracies are structured with a clear hierarchy and formalized procedures."
     },
     {
-        question: "Which is a primary function of the criminal justice system?",
-        choice1: "Punish offenders",
-        choice2: "Rehabilitate offenders",
-        choice3: "Maintain social order through law enforcement",
-        choice4: "All of the above",
-        answer: "All of the above",
-        rationale: "The criminal justice system has multiple functions including punishment, rehabilitation, and maintaining social order."
+        question: "What term refers to a system of beliefs and practices that attempts to order life in terms of ultimate meaning?",
+        choice1: "Religion",
+        choice2: "Government",
+        choice3: "Education",
+        choice4: "Economy",
+        answer: "Religion",
+        rationale: "Religion provides moral guidelines and explanations for human existence."
     },
     {
-        question: "What is a primary objective of law enforcement agencies?",
-        choice1: "Punish criminals",
-        choice2: "Collect taxes",
-        choice3: "Maintain public order and safety",
-        choice4: "Define criminal law",
-        answer: "Maintain public order and safety",
-        rationale: "Law enforcement agencies are primarily tasked with maintaining public order and safety."
+        question: "Which sociological perspective focuses on power differences and social inequality?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Postmodernism",
+        answer: "Conflict theory",
+        rationale: "Conflict theory, developed by Karl Marx, examines social struggles and inequality."
     },
     {
-        question: "Which type of law is concerned with the rules of conduct that govern relations between individuals and society?",
-        choice1: "Civil Law",
-        choice2: "Criminal Law",
-        choice3: "Administrative Law",
-        choice4: "Constitutional Law",
-        answer: "Criminal Law",
-        rationale: "Criminal law deals with actions that are offenses against society, such as theft, assault, and murder."
+        question: "What is the primary function of social institutions?",
+        choice1: "To create individual identities",
+        choice2: "To maintain social order",
+        choice3: "To eliminate cultural differences",
+        choice4: "To enforce social deviance",
+        answer: "To maintain social order",
+        rationale: "Institutions like family, education, and government help regulate societal functions."
     },
     {
-        question: "The concept of 'double jeopardy' refers to:",
-        choice1: "Being tried for the same crime twice",
-        choice2: "Punishment for two separate crimes",
-        choice3: "Reinvestigation of a case after an appeal",
-        choice4: "The protection of constitutional rights for criminals",
-        answer: "Being tried for the same crime twice",
-        rationale: "Double jeopardy is the legal principle that a person cannot be tried twice for the same offense."
+        question: "Which of the following is NOT considered a social institution?",
+        choice1: "Education",
+        choice2: "Family",
+        choice3: "Government",
+        choice4: "Fashion trends",
+        answer: "Fashion trends",
+        rationale: "Fashion trends change frequently and do not provide structured social order."
     },
     {
-        question: "In which criminal justice system stage is the defendant formally charged and presented with evidence?",
-        choice1: "Arrest",
-        choice2: "Trial",
-        choice3: "Pretrial hearing",
-        choice4: "Sentencing",
-        answer: "Pretrial hearing",
-        rationale: "The pretrial hearing is where the defendant is formally charged, and evidence is presented."
+        question: "What term describes the movement of individuals or groups between different social positions?",
+        choice1: "Social mobility",
+        choice2: "Socialization",
+        choice3: "Assimilation",
+        choice4: "Gentrification",
+        answer: "Social mobility",
+        rationale: "Social mobility refers to shifts in social status, often through education or economic changes."
     },
     {
-        question: "Which of the following is an example of a victimless crime?",
-        choice1: "Drug use",
-        choice2: "Robbery",
-        choice3: "Murder",
-        choice4: "Burglary",
-        answer: "Drug use",
-        rationale: "Victimless crimes involve actions that harm no one other than the perpetrator, such as drug use."
+        question: "What term refers to the ability of individuals or groups to achieve their goals despite opposition?",
+        choice1: "Authority",
+        choice2: "Power",
+        choice3: "Influence",
+        choice4: "Control",
+        answer: "Power",
+        rationale: "Power is the capacity to influence or enforce decisions over others."
     },
     {
-        question: "What is a key component of national security?",
-        choice1: "Military defense",
-        choice2: "Economic stability",
-        choice3: "Political stability",
-        choice4: "All of the above",
-        answer: "All of the above",
-        rationale: "National security encompasses military, economic, and political aspects to ensure a country's safety."
+        question: "Which theory argues that social institutions work together to maintain stability?",
+        choice1: "Symbolic interactionism",
+        choice2: "Conflict theory",
+        choice3: "Functionalism",
+        choice4: "Rational choice theory",
+        answer: "Functionalism",
+        rationale: "Functionalism sees society as a system where institutions contribute to overall stability."
     },
     {
-        question: "Which of the following is an example of a transnational crime?",
-        choice1: "Local burglary",
-        choice2: "Drug trafficking across borders",
-        choice3: "Assault",
-        choice4: "Pickpocketing",
-        answer: "Drug trafficking across borders",
-        rationale: "Transnational crime involves illegal activities that cross national borders, such as drug trafficking."
+        question: "What is an example of non-material culture?",
+        choice1: "A smartphone",
+        choice2: "A country's language",
+        choice3: "A painting",
+        choice4: "Clothing",
+        answer: "A country's language",
+        rationale: "Non-material culture includes beliefs, values, norms, and language."
     },
     {
-        question: "International security studies focus primarily on:",
-        choice1: "Domestic law enforcement",
-        choice2: "Global conflicts and threats",
-        choice3: "Local police tactics",
-        choice4: "Criminal trials",
-        answer: "Global conflicts and threats",
-        rationale: "International security studies address global threats such as terrorism, nuclear proliferation, and interstate wars."
+        question: "What term describes the cultural standards that define what is good or desirable?",
+        choice1: "Norms",
+        choice2: "Values",
+        choice3: "Laws",
+        choice4: "Mores",
+        answer: "Values",
+        rationale: "Values are the moral beliefs of a society, shaping its goals and priorities."
     },
     {
-        question: "What is one of the primary goals of security studies?",
-        choice1: "Punish offenders",
-        choice2: "Analyze national and international security threats",
-        choice3: "Rehabilitate offenders",
-        choice4: "Enforce criminal laws",
-        answer: "Analyze national and international security threats",
-        rationale: "Security studies aim to analyze and address threats to national and international security."
+        question: "Which of the following best describes a counterculture?",
+        choice1: "A subgroup within a dominant culture",
+        choice2: "A group that actively opposes mainstream culture",
+        choice3: "A traditional culture",
+        choice4: "A form of popular culture",
+        answer: "A group that actively opposes mainstream culture",
+        rationale: "Countercultures reject mainstream values and norms, often advocating alternative lifestyles."
     },
     {
-        question: "The crime of piracy is an example of:",
-        choice1: "Domestic crime",
-        choice2: "Transnational crime",
-        choice3: "Organized crime",
-        choice4: "White-collar crime",
-        answer: "Transnational crime",
-        rationale: "Piracy is a transnational crime that takes place on the high seas and involves illegal activities such as hijacking ships."
+         question: "Which of the following is an example of a folkway?",
+        choice1: "Wearing formal attire to a wedding",
+        choice2: "Laws against theft",
+        choice3: "Religious dietary restrictions",
+        choice4: "Punishment for murder",
+        answer: "Wearing formal attire to a wedding",
+        rationale: "Folkways are informal norms that guide everyday behavior, like dress codes."
     },
     {
-        question: "Which of the following is an example of international law enforcement cooperation?",
-        choice1: "FBI conducting local investigations",
-        choice2: "Interpol coordinating efforts to catch international criminals",
-        choice3: "A state's local police force tackling drug use",
-        choice4: "A local sheriff arresting suspects",
-        answer: "Interpol coordinating efforts to catch international criminals",
-        rationale: "Interpol is an international organization that helps police from different countries cooperate in solving cross-border crimes."
+        question: "What is the term for norms that are widely observed and have great moral significance?",
+        choice1: "Folkways",
+        choice2: "Mores",
+        choice3: "Laws",
+        choice4: "Taboos",
+        answer: "Mores",
+        rationale: "Mores are deeply held norms that define moral behavior in a society."
     },
     {
-        question: "The term 'criminal justice system' refers to:",
-        choice1: "A system to enforce civil law",
-        choice2: "The police and their investigation methods",
-        choice3: "A network of agencies to enforce laws and administer justice",
-        choice4: "Only the courts and sentencing procedures",
-        answer: "A network of agencies to enforce laws and administer justice",
-        rationale: "The criminal justice system is a comprehensive network of agencies involved in law enforcement, courts, and corrections."
+        question: "What is cultural relativism?",
+        choice1: "Judging other cultures by the standards of one’s own",
+        choice2: "Accepting all cultural practices as equally valid",
+        choice3: "Understanding cultures within their own context",
+        choice4: "Rejecting one’s own culture",
+        answer: "Understanding cultures within their own context",
+        rationale: "Cultural relativism promotes understanding a culture based on its own values and norms."
     },
     {
-        question: "The Uniform Crime Report (UCR) is a key tool used by which agency?",
-        choice1: "FBI",
-        choice2: "CIA",
-        choice3: "Department of Homeland Security",
-        choice4: "Department of Justice",
-        answer: "FBI",
-        rationale: "The UCR is published by the FBI and provides national statistics on crime rates."
+        question: "What term refers to the spread of cultural elements from one society to another?",
+        choice1: "Cultural diffusion",
+        choice2: "Cultural shock",
+        choice3: "Cultural integration",
+        choice4: "Ethnocentrism",
+        answer: "Cultural diffusion",
+        rationale: "Cultural diffusion occurs when cultural traits, such as ideas and technologies, spread between societies."
     },
     {
-        question: "Which of the following is considered a part of the criminal justice process?",
-        choice1: "Investigation",
-        choice2: "Arrest",
-        choice3: "Trial",
-        choice4: "All of the above",
-        answer: "All of the above",
-        rationale: "The criminal justice process includes investigation, arrest, trial, and sentencing."
+        question: "Which term describes a rigid and unfair generalization about a group of people?",
+        choice1: "Stereotype",
+        choice2: "Prejudice",
+        choice3: "Discrimination",
+        choice4: "Ethnocentrism",
+        answer: "Stereotype",
+        rationale: "Stereotypes are oversimplified and often inaccurate beliefs about a group."
     },
     {
-        question: "Which of the following is an example of a terrorist act?",
-        choice1: "Robbery",
-        choice2: "Assault",
-        choice3: "Bombing for political or religious purposes",
-        choice4: "Fraud",
-        answer: "Bombing for political or religious purposes",
-        rationale: "Terrorist acts often involve violence to achieve political, religious, or ideological objectives."
+        question: "What is the term for the process by which individuals learn and adopt a new culture?",
+        choice1: "Socialization",
+        choice2: "Acculturation",
+        choice3: "Assimilation",
+        choice4: "Enculturation",
+        answer: "Acculturation",
+        rationale: "Acculturation is the process of adapting to a new cultural environment."
     },
     {
-        question: "The concept of 'cybercrime' primarily refers to:",
-        choice1: "Traditional theft",
-        choice2: "Crimes committed via computers or the internet",
-        choice3: "Drug trafficking",
-        choice4: "Organized crime",
-        answer: "Crimes committed via computers or the internet",
-        rationale: "Cybercrime involves criminal activities that are carried out through computers or the internet."
+        question: "Which of the following is an example of a total institution?",
+        choice1: "A university",
+        choice2: "A prison",
+        choice3: "A corporation",
+        choice4: "A family",
+        answer: "A prison",
+        rationale: "Total institutions, like prisons, control nearly all aspects of their members' lives."
     },
     {
-        question: "Which of the following is true about criminal law?",
-        choice1: "It governs relationships between individuals",
-        choice2: "It focuses on punishing individuals for crimes committed against society",
-        choice3: "It is unrelated to constitutional law",
-        choice4: "It only applies to violent crimes",
-        answer: "It focuses on punishing individuals for crimes committed against society",
-        rationale: "Criminal law focuses on actions that harm society and punishes offenders accordingly."
+        question: "Which sociologist introduced the concept of role-taking?",
+        choice1: "Karl Marx",
+        choice2: "Émile Durkheim",
+        choice3: "George Herbert Mead",
+        choice4: "Max Weber",
+        answer: "George Herbert Mead",
+        rationale: "Mead's theory of role-taking explains how individuals adopt perspectives through social interaction."
     },
     {
-        question: "Which crime typology refers to financial crimes committed by individuals in positions of trust?",
-        choice1: "Organized Crime",
-        choice2: "White-Collar Crime",
-        choice3: "Violent Crime",
-        choice4: "Property Crime",
-        answer: "White-Collar Crime",
-        rationale: "White-collar crimes are non-violent crimes often committed by professionals or individuals in power for financial gain."
+        question: "What is the term for the expectations associated with a given social position?",
+        choice1: "Status",
+        choice2: "Role",
+        choice3: "Norm",
+        choice4: "Culture",
+        answer: "Role",
+        rationale: "A role is a set of behaviors expected of someone occupying a particular status."
     },
     {
-        question: "What is the main idea behind the Classical School of Criminology?",
-        choice1: "Criminal behavior is determined by biological factors",
-        choice2: "Punishment should be based on divine will",
-        choice3: "People have free will and commit crimes after weighing benefits and costs",
-        choice4: "Crime is a mental disorder",
-        answer: "People have free will and commit crimes after weighing benefits and costs",
-        rationale: "The Classical School argues that people are rational and make choices based on pleasure and pain calculations."
+        question: "What is the difference between an achieved status and an ascribed status?",
+        choice1: "Achieved status is inherited, ascribed status is earned",
+        choice2: "Achieved status is voluntary, ascribed status is involuntary",
+        choice3: "Achieved status is temporary, ascribed status is permanent",
+        choice4: "There is no difference",
+        answer: "Achieved status is voluntary, ascribed status is involuntary",
+        rationale: "Achieved status is based on effort, while ascribed status is assigned at birth."
     },
     {
-        question: "Cesare Beccaria’s major work, ‘On Crimes and Punishments,’ argued for what key reform?",
-        choice1: "Harsher punishments for serious crimes",
-        choice2: "Torture as an effective interrogation method",
-        choice3: "Fair and proportional punishment based on the severity of the crime",
-        choice4: "More reliance on divine judgment",
-        answer: "Fair and proportional punishment based on the severity of the crime",
-        rationale: "Beccaria advocated for just and proportionate punishments to deter crime without excessive cruelty."
+        question: "What term describes a social position that dominates all others in shaping a person's identity?",
+        choice1: "Master status",
+        choice2: "Primary status",
+        choice3: "Role strain",
+        choice4: "Role conflict",
+        answer: "Master status",
+        rationale: "Master status is a defining social position, such as being a celebrity or a doctor."
     },
     {
-        question: "According to Beccaria, which of the following is most effective in preventing crime?",
-        choice1: "Severe and brutal punishments",
-        choice2: "Certainty and swiftness of punishment",
-        choice3: "Religious interventions",
-        choice4: "Public executions",
-        answer: "Certainty and swiftness of punishment",
-        rationale: "Beccaria emphasized that punishment should be swift and certain rather than excessively harsh."
+        question: "What is the main characteristic of a secondary group?",
+        choice1: "Intimate and personal interactions",
+        choice2: "Short-term, goal-oriented relationships",
+        choice3: "Emotional attachment",
+        choice4: "Strong kinship ties",
+        answer: "Short-term, goal-oriented relationships",
+        rationale: "Secondary groups are larger, impersonal, and focused on specific tasks or goals."
     },
     {
-        question: "Jeremy Bentham’s theory of Utilitarianism focuses on what?",
-        choice1: "Punishment should cause maximum pain to criminals",
-        choice2: "Laws should ensure the greatest happiness for the greatest number",
-        choice3: "Crime is caused by genetic factors",
-        choice4: "Judges should have complete discretion in sentencing",
-        answer: "Laws should ensure the greatest happiness for the greatest number",
-        rationale: "Bentham’s Utilitarianism seeks to maximize social happiness through rational laws and punishments."
+        question: "Which type of social organization is characterized by formal rules and hierarchy?",
+        choice1: "Primary group",
+        choice2: "Bureaucracy",
+        choice3: "Reference group",
+        choice4: "Peer group",
+        answer: "Bureaucracy",
+        rationale: "Bureaucracies are structured organizations with set procedures and authority levels."
     },
     {
-        question: "Which of the following best describes Bentham’s concept of the ‘Panopticon’?",
-        choice1: "A religious-based legal system",
-        choice2: "A prison design allowing constant surveillance to encourage self-discipline",
-        choice3: "A torture device used in classical criminology",
-        choice4: "A method for rehabilitating offenders using psychological therapy",
-        answer: "A prison design allowing constant surveillance to encourage self-discipline",
-        rationale: "Bentham’s Panopticon was a circular prison with a central watchtower, promoting behavioral control through surveillance."
+        question: "Which of the following is an example of social change?",
+        choice1: "A person getting a new job",
+        choice2: "A new law granting voting rights",
+        choice3: "A family moving to another city",
+        choice4: "A student learning a new language",
+        answer: "A new law granting voting rights",
+        rationale: "Social change refers to shifts in societal norms, institutions, or structures."
     },
     {
-        question: "What did Beccaria believe about capital punishment (death penalty)?",
-        choice1: "It is necessary for the most serious crimes",
-        choice2: "It should be abolished because it is ineffective and inhumane",
-        choice3: "It should be applied to all crimes to maintain order",
-        choice4: "It should be left to religious authorities to decide",
-        answer: "It should be abolished because it is ineffective and inhumane",
-        rationale: "Beccaria argued that the death penalty was not an effective deterrent and called for its abolition."
+        question: "Which theory suggests that technological advancements drive social change?",
+        choice1: "Modernization theory",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Functionalism",
+        answer: "Modernization theory",
+        rationale: "Modernization theory explains how industrial and technological progress shape societies."
     },
     {
-        question: "According to Classical Criminology, why do people commit crimes?",
-        choice1: "They are influenced by biological and psychological traits",
-        choice2: "They lack proper education and moral guidance",
-        choice3: "They make rational choices based on potential rewards and punishments",
-        choice4: "They are controlled by supernatural forces",
-        answer: "They make rational choices based on potential rewards and punishments",
-        rationale: "Classical theorists believed that individuals weigh the pros and cons before committing crimes."
+        question: "Which term refers to the process by which a society becomes industrialized and urbanized?",
+        choice1: "Cultural lag",
+        choice2: "Globalization",
+        choice3: "Modernization",
+        choice4: "Socialization",
+        answer: "Modernization",
+        rationale: "Modernization involves technological, economic, and social transformation."
     },
     {
-        question: "How does the Classical School of Criminology view human nature?",
-        choice1: "Humans are naturally evil and must be controlled through strict laws",
-        choice2: "Humans are rational beings who make choices based on self-interest",
-        choice3: "Human behavior is solely determined by psychological conditions",
-        choice4: "Criminal behavior is the result of divine punishment",
-        answer: "Humans are rational beings who make choices based on self-interest",
-        rationale: "Classical theorists like Beccaria and Bentham saw humans as rational actors who calculate risks and benefits."
+        question: "What is cultural lag?",
+        choice1: "When cultural elements spread too quickly",
+        choice2: "When society adopts technology but not the accompanying social norms",
+        choice3: "When a culture rejects external influences",
+        choice4: "When cultures merge into one",
+        answer: "When society adopts technology but not the accompanying social norms",
+        rationale: "Cultural lag occurs when material culture advances faster than social or moral adaptations."
     },
     {
-        question: "Which of the following best describes Auguste Comte’s positivist criminology?",
-        choice1: "Criminals are born with inherent evil tendencies",
-        choice2: "Crime is a result of rational choice and free will",
-        choice3: "Scientific methods should be used to study crime and its causes",
-        choice4: "Criminal punishment should be purely based on religious doctrines",
-        answer: "Scientific methods should be used to study crime and its causes",
-        rationale: "Comte introduced positivism, which applies scientific methods to understand crime based on social and biological factors."
+        question: "Which of the following is an example of globalization?",
+        choice1: "A local farmer selling crops at a market",
+        choice2: "A multinational corporation operating in multiple countries",
+        choice3: "A neighborhood organizing a community event",
+        choice4: "A school implementing a new dress code",
+        answer: "A multinational corporation operating in multiple countries",
+        rationale: "Globalization refers to the increasing interconnectedness of the world in trade, culture, and technology."
     },
     {
-        question: "What is a major difference between Classical and Positivist criminology?",
-        choice1: "Classical criminology focuses on free will, while positivism looks at external influences",
-        choice2: "Classical criminology supports the death penalty, while positivism opposes it",
-        choice3: "Positivism believes in supernatural explanations for crime",
-        choice4: "Classical criminology rejects the concept of rational choice",
-        answer: "Classical criminology focuses on free will, while positivism looks at external influences",
-        rationale: "Classical criminology argues that crime results from rational choice, while positivism focuses on social, psychological, and biological factors."
+        question: "What term describes a movement aimed at achieving social change?",
+        choice1: "Cultural diffusion",
+        choice2: "Social movement",
+        choice3: "Social mobility",
+        choice4: "Institutionalization",
+        answer: "Social mobility",
+        rationale: "Social movements advocate for changes in policies, laws, or cultural practices."
     },
     {
-        question: "According to Comte’s positivism, which of the following should be used to study crime?",
-        choice1: "Philosophical debates",
-        choice2: "Scientific observation and empirical research",
-        choice3: "Religious texts and moral discussions",
-        choice4: "Personal opinions of legal scholars",
-        answer: "Scientific observation and empirical research",
-        rationale: "Positivism emphasizes using scientific methods and data to study criminal behavior."
-    },
-    {
-        question: "How did Auguste Comte classify human knowledge in his positivist theory?",
-        choice1: "Religious, Scientific, and Political",
-        choice2: "Theological, Metaphysical, and Positive",
-        choice3: "Criminal, Non-Criminal, and Neutral",
-        choice4: "Biological, Psychological, and Sociological",
-        answer: "Theological, Metaphysical, and Positive",
-        rationale: "Comte’s three stages of knowledge include Theological (supernatural explanations), Metaphysical (abstract thinking), and Positive (scientific reasoning)."
+        question: "Which of the following is an example of resistance to social change?",
+        choice1: "A government legalizing same-sex marriage",
+        choice2: "A company adopting a four-day workweek",
+        choice3: "A community opposing environmental regulations",
+        choice4: "A school implementing online learning",
+        answer: "A community opposing environmental regulations",
+        rationale: "Resistance to social change occurs when groups actively oppose new policies or cultural shifts."
     }
 ];
-
     
 
 
