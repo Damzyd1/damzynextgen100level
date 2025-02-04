@@ -20,355 +20,274 @@ let availableQuestion = [];
 */
  let questions = [
     {
-        question: "Who is considered the father of sociology?",
-        choice1: "Karl Marx",
-        choice2: "Auguste Comte",
-        choice3: "Émile Durkheim",
-        choice4: "Max Weber",
-        answer: "Auguste Comte",
-        rationale: "Auguste Comte coined the term 'sociology' and laid the foundation for its study."
+        question: "What is the normative basis of society?",
+        choice1: "A set of rules and expectations that guide behavior",
+        choice2: "A system of economic exchange",
+        choice3: "A collection of individual preferences",
+        choice4: "A historical record of events",
+        answer: "A set of rules and expectations that guide behavior",
+        rationale: "The normative basis of society refers to the shared rules and expectations that guide behavior and maintain social order."
     },
     {
-        question: "Which of the following best defines sociology?",
-        choice1: "The study of individual behavior",
-        choice2: "The study of human society and social behavior",
-        choice3: "The study of past human societies",
-        choice4: "The study of economic systems",
-        answer: "The study of human society and social behavior",
-        rationale: "Sociology focuses on social structures, interactions, and cultural patterns."
-    },
-    {
-        question: "What term describes the shared beliefs, values, and practices of a group?",
-        choice1: "Culture",
-        choice2: "Society",
-        choice3: "Norms",
-        choice4: "Institutions",
-        answer: "Culture",
-        rationale: "Culture encompasses the ideas, customs, and social behavior of a particular society."
-    },
-    {
-        question: "What is the term for the process by which individuals learn their society’s norms, values, and roles?",
-        choice1: "Acculturation",
-        choice2: "Socialization",
-        choice3: "Institutionalization",
-        choice4: "Assimilation",
-        answer: "Socialization",
-        rationale: "Socialization is the lifelong process of learning and internalizing societal expectations."
-    },
-    {
-        question: "Which of the following is NOT an agent of socialization?",
-        choice1: "Family",
-        choice2: "Media",
-        choice3: "Biology",
-        choice4: "Peers",
-        answer: "Biology",
-        rationale: "Socialization is influenced by social institutions, not biological factors."
-    },
-    {
-        question: "Which sociologist introduced the concept of the 'looking-glass self'?",
-        choice1: "George Herbert Mead",
-        choice2: "Charles Horton Cooley",
-        choice3: "Émile Durkheim",
-        choice4: "Max Weber",
-        answer: "Charles Horton Cooley",
-        rationale: "Cooley’s 'looking-glass self' explains how self-identity is shaped by social interactions."
-    },
-    {
-        question: "What term describes a group that strongly influences a person’s behavior and social identity?",
-        choice1: "Out-group",
-        choice2: "Reference group",
-        choice3: "Secondary group",
-        choice4: "Primary group",
-        answer: "Reference group",
-        rationale: "A reference group serves as a standard for evaluating oneself."
-    },
-    {
-        question: "Which type of group is characterized by close, personal, and enduring relationships?",
-        choice1: "Primary group",
-        choice2: "Secondary group",
-        choice3: "Out-group",
-        choice4: "Formal organization",
-        answer: "Primary group",
-        rationale: "Primary groups, like family and close friends, provide emotional support and long-term bonds."
-    },
-    {
-        question: "What is the primary characteristic of a bureaucracy?",
-        choice1: "Flexibility",
-        choice2: "Hierarchical structure",
-        choice3: "Informal relationships",
-        choice4: "Lack of leadership",
-        answer: "Hierarchical structure",
-        rationale: "Bureaucracies are structured with a clear hierarchy and formalized procedures."
-    },
-    {
-        question: "What term refers to a system of beliefs and practices that attempts to order life in terms of ultimate meaning?",
-        choice1: "Religion",
-        choice2: "Government",
-        choice3: "Education",
-        choice4: "Economy",
-        answer: "Religion",
-        rationale: "Religion provides moral guidelines and explanations for human existence."
-    },
-    {
-        question: "Which sociological perspective focuses on power differences and social inequality?",
-        choice1: "Functionalism",
-        choice2: "Conflict theory",
-        choice3: "Symbolic interactionism",
-        choice4: "Postmodernism",
-        answer: "Conflict theory",
-        rationale: "Conflict theory, developed by Karl Marx, examines social struggles and inequality."
-    },
-    {
-        question: "What is the primary function of social institutions?",
-        choice1: "To create individual identities",
-        choice2: "To maintain social order",
-        choice3: "To eliminate cultural differences",
-        choice4: "To enforce social deviance",
-        answer: "To maintain social order",
-        rationale: "Institutions like family, education, and government help regulate societal functions."
-    },
-    {
-        question: "Which of the following is NOT considered a social institution?",
-        choice1: "Education",
+        question: "Which of the following is a primary agent of socialization?",
+        choice1: "Media",
         choice2: "Family",
         choice3: "Government",
-        choice4: "Fashion trends",
-        answer: "Fashion trends",
-        rationale: "Fashion trends change frequently and do not provide structured social order."
+        choice4: "Economy",
+        answer: "Family",
+        rationale: "Family is considered the primary agent of socialization as it is the first and most influential source of social norms and values."
     },
     {
-        question: "What term describes the movement of individuals or groups between different social positions?",
-        choice1: "Social mobility",
-        choice2: "Socialization",
-        choice3: "Assimilation",
-        choice4: "Gentrification",
-        answer: "Social mobility",
-        rationale: "Social mobility refers to shifts in social status, often through education or economic changes."
+        question: "What is social control?",
+        choice1: "The regulation of individual behavior by the government",
+        choice2: "The process by which society influences individuals to conform to norms",
+        choice3: "The enforcement of economic policies",
+        choice4: "The study of deviant behavior",
+        answer: "The process by which society influences individuals to conform to norms",
+        rationale: "Social control refers to the mechanisms, strategies, and institutions that societies use to ensure individuals conform to norms."
     },
     {
-        question: "What term refers to the ability of individuals or groups to achieve their goals despite opposition?",
-        choice1: "Authority",
-        choice2: "Power",
-        choice3: "Influence",
-        choice4: "Control",
-        answer: "Power",
-        rationale: "Power is the capacity to influence or enforce decisions over others."
+        question: "Which of the following is an example of deviant behavior?",
+        choice1: "Paying taxes",
+        choice2: "Stealing",
+        choice3: "Voting in elections",
+        choice4: "Attending school",
+        answer: "Stealing",
+        rationale: "Deviant behavior refers to actions that violate social norms, such as stealing."
     },
     {
-        question: "Which theory argues that social institutions work together to maintain stability?",
-        choice1: "Symbolic interactionism",
-        choice2: "Conflict theory",
-        choice3: "Functionalism",
-        choice4: "Rational choice theory",
-        answer: "Functionalism",
-        rationale: "Functionalism sees society as a system where institutions contribute to overall stability."
+        question: "What is the social construction of deviance?",
+        choice1: "The idea that deviance is biologically determined",
+        choice2: "The idea that deviance is defined by societal norms and values",
+        choice3: "The idea that deviance is universal across cultures",
+        choice4: "The idea that deviance is unrelated to social context",
+        answer: "The idea that deviance is defined by societal norms and values",
+        rationale: "The social construction of deviance refers to the idea that deviance is defined by societal norms and values, which vary across cultures and time."
     },
     {
-        question: "What is an example of non-material culture?",
-        choice1: "A smartphone",
-        choice2: "A country's language",
-        choice3: "A painting",
-        choice4: "Clothing",
-        answer: "A country's language",
-        rationale: "Non-material culture includes beliefs, values, norms, and language."
+        question: "What is labelling theory in the context of deviance?",
+        choice1: "The idea that deviance is a result of genetic factors",
+        choice2: "The idea that deviance is a result of economic inequality",
+        choice3: "The idea that deviance is a result of being labeled as deviant by society",
+        choice4: "The idea that deviance is a result of individual choice",
+        answer: "The idea that deviance is a result of being labeled as deviant by society",
+        rationale: "Labelling theory suggests that individuals become deviant because they are labeled as such by society, which influences their behavior."
     },
     {
-        question: "What term describes the cultural standards that define what is good or desirable?",
-        choice1: "Norms",
-        choice2: "Values",
-        choice3: "Laws",
-        choice4: "Mores",
-        answer: "Values",
-        rationale: "Values are the moral beliefs of a society, shaping its goals and priorities."
+        question: "What is stigmatization in the context of deviance?",
+        choice1: "The process of rewarding conforming behavior",
+        choice2: "The process of assigning negative labels to individuals or groups",
+        choice3: "The process of promoting social equality",
+        choice4: "The process of enforcing laws",
+        answer: "The process of assigning negative labels to individuals or groups",
+        rationale: "Stigmatization refers to the process of assigning negative labels to individuals or groups, often leading to social exclusion."
     },
     {
-        question: "Which of the following best describes a counterculture?",
-        choice1: "A subgroup within a dominant culture",
-        choice2: "A group that actively opposes mainstream culture",
-        choice3: "A traditional culture",
-        choice4: "A form of popular culture",
-        answer: "A group that actively opposes mainstream culture",
-        rationale: "Countercultures reject mainstream values and norms, often advocating alternative lifestyles."
+        question: "Which of the following is a role of inequality in the control of deviance?",
+        choice1: "It promotes social harmony",
+        choice2: "It creates opportunities for upward mobility",
+        choice3: "It reinforces social hierarchies and power dynamics",
+        choice4: "It eliminates deviant behavior",
+        answer: "It reinforces social hierarchies and power dynamics",
+        rationale: "Inequality reinforces social hierarchies and power dynamics, which can influence who is labeled as deviant and how deviance is controlled."
     },
     {
-         question: "Which of the following is an example of a folkway?",
-        choice1: "Wearing formal attire to a wedding",
-        choice2: "Laws against theft",
-        choice3: "Religious dietary restrictions",
-        choice4: "Punishment for murder",
-        answer: "Wearing formal attire to a wedding",
-        rationale: "Folkways are informal norms that guide everyday behavior, like dress codes."
+        question: "Which institution is most responsible for formal social control?",
+        choice1: "Family",
+        choice2: "Education system",
+        choice3: "Criminal justice system",
+        choice4: "Media",
+        answer: "Criminal justice system",
+        rationale: "The criminal justice system is responsible for formal social control through laws, regulations, and enforcement mechanisms."
     },
     {
-        question: "What is the term for norms that are widely observed and have great moral significance?",
-        choice1: "Folkways",
-        choice2: "Mores",
-        choice3: "Laws",
-        choice4: "Taboos",
-        answer: "Mores",
-        rationale: "Mores are deeply held norms that define moral behavior in a society."
+        question: "What is an example of informal social control?",
+        choice1: "Arrest by police",
+        choice2: "Gossip and ridicule",
+        choice3: "Court sentencing",
+        choice4: "Legislation",
+        answer: "Gossip and ridicule",
+        rationale: "Informal social control includes mechanisms like gossip, ridicule, and social ostracism, which are not formalized but still influence behavior."
     },
     {
-        question: "What is cultural relativism?",
-        choice1: "Judging other cultures by the standards of one’s own",
-        choice2: "Accepting all cultural practices as equally valid",
-        choice3: "Understanding cultures within their own context",
-        choice4: "Rejecting one’s own culture",
-        answer: "Understanding cultures within their own context",
-        rationale: "Cultural relativism promotes understanding a culture based on its own values and norms."
+        question: "Which of the following is a type of deviant behavior?",
+        choice1: "Conforming to social norms",
+        choice2: "Breaking a law",
+        choice3: "Following religious practices",
+        choice4: "Participating in community events",
+        answer: "Breaking a law",
+        rationale: "Deviant behavior includes actions that violate social norms, such as breaking a law."
     },
     {
-        question: "What term refers to the spread of cultural elements from one society to another?",
-        choice1: "Cultural diffusion",
-        choice2: "Cultural shock",
-        choice3: "Cultural integration",
-        choice4: "Ethnocentrism",
-        answer: "Cultural diffusion",
-        rationale: "Cultural diffusion occurs when cultural traits, such as ideas and technologies, spread between societies."
+        question: "How does culture influence the control of deviance?",
+        choice1: "By promoting universal norms",
+        choice2: "By defining what is considered deviant",
+        choice3: "By eliminating inequality",
+        choice4: "By enforcing formal laws",
+        answer: "By defining what is considered deviant",
+        rationale: "Culture influences the control of deviance by defining what is considered deviant within a specific societal context."
     },
     {
-        question: "Which term describes a rigid and unfair generalization about a group of people?",
-        choice1: "Stereotype",
-        choice2: "Prejudice",
-        choice3: "Discrimination",
-        choice4: "Ethnocentrism",
-        answer: "Stereotype",
-        rationale: "Stereotypes are oversimplified and often inaccurate beliefs about a group."
+        question: "What role does gender play in the control of deviance?",
+        choice1: "It has no influence on deviance",
+        choice2: "It determines biological predispositions to deviance",
+        choice3: "It shapes societal expectations and responses to deviance",
+        choice4: "It eliminates deviant behavior",
+        answer: "It shapes societal expectations and responses to deviance",
+        rationale: "Gender shapes societal expectations and responses to deviance, influencing how deviant behavior is perceived and controlled."
     },
     {
-        question: "What is the term for the process by which individuals learn and adopt a new culture?",
-        choice1: "Socialization",
-        choice2: "Acculturation",
-        choice3: "Assimilation",
-        choice4: "Enculturation",
-        answer: "Acculturation",
-        rationale: "Acculturation is the process of adapting to a new cultural environment."
+        question: "Which of the following is an example of formal social control?",
+        choice1: "Peer pressure",
+        choice2: "Laws and regulations",
+        choice3: "Family discipline",
+        choice4: "Community norms",
+        answer: "Laws and regulations",
+        rationale: "Formal social control includes laws and regulations enforced by institutions like the government and criminal justice system."
     },
     {
-        question: "Which of the following is an example of a total institution?",
-        choice1: "A university",
-        choice2: "A prison",
-        choice3: "A corporation",
-        choice4: "A family",
-        answer: "A prison",
-        rationale: "Total institutions, like prisons, control nearly all aspects of their members' lives."
+        question: "What is the primary purpose of social control?",
+        choice1: "To promote individualism",
+        choice2: "To maintain social order",
+        choice3: "To encourage deviance",
+        choice4: "To eliminate cultural norms",
+        answer: "To maintain social order",
+        rationale: "The primary purpose of social control is to maintain social order by ensuring individuals conform to societal norms."
     },
     {
-        question: "Which sociologist introduced the concept of role-taking?",
-        choice1: "Karl Marx",
-        choice2: "Émile Durkheim",
-        choice3: "George Herbert Mead",
-        choice4: "Max Weber",
-        answer: "George Herbert Mead",
-        rationale: "Mead's theory of role-taking explains how individuals adopt perspectives through social interaction."
+        question: "Which of the following is a characteristic of informal social control?",
+        choice1: "It is enforced by the government",
+        choice2: "It relies on social interactions and relationships",
+        choice3: "It involves formal laws and regulations",
+        choice4: "It is applied uniformly across all societies",
+        answer: "It relies on social interactions and relationships",
+        rationale: "Informal social control relies on social interactions, relationships, and community norms rather than formal laws."
     },
     {
-        question: "What is the term for the expectations associated with a given social position?",
-        choice1: "Status",
-        choice2: "Role",
-        choice3: "Norm",
-        choice4: "Culture",
-        answer: "Role",
-        rationale: "A role is a set of behaviors expected of someone occupying a particular status."
+        question: "What is the relationship between socialisation and social control?",
+        choice1: "Socialisation eliminates the need for social control",
+        choice2: "Socialisation teaches individuals to conform to norms, reducing the need for external control",
+        choice3: "Socialisation encourages deviant behavior",
+        choice4: "Socialisation is unrelated to social control",
+        answer: "Socialisation teaches individuals to conform to norms, reducing the need for external control",
+        rationale: "Socialisation teaches individuals to internalize societal norms, reducing the need for external social control mechanisms."
     },
     {
-        question: "What is the difference between an achieved status and an ascribed status?",
-        choice1: "Achieved status is inherited, ascribed status is earned",
-        choice2: "Achieved status is voluntary, ascribed status is involuntary",
-        choice3: "Achieved status is temporary, ascribed status is permanent",
-        choice4: "There is no difference",
-        answer: "Achieved status is voluntary, ascribed status is involuntary",
-        rationale: "Achieved status is based on effort, while ascribed status is assigned at birth."
+        question: "Which of the following is an example of the social construction of deviance?",
+        choice1: "A universal definition of crime",
+        choice2: "Cultural variations in what is considered deviant",
+        choice3: "Biological explanations for deviance",
+        choice4: "Economic theories of deviance",
+        answer: "Cultural variations in what is considered deviant",
+        rationale: "The social construction of deviance emphasizes that definitions of deviance vary across cultures and societies."
     },
     {
-        question: "What term describes a social position that dominates all others in shaping a person's identity?",
-        choice1: "Master status",
-        choice2: "Primary status",
-        choice3: "Role strain",
-        choice4: "Role conflict",
-        answer: "Master status",
-        rationale: "Master status is a defining social position, such as being a celebrity or a doctor."
+        question: "What is the role of institutions in the control of deviance?",
+        choice1: "They promote deviant behavior",
+        choice2: "They enforce norms and regulate behavior",
+        choice3: "They eliminate social norms",
+        choice4: "They encourage individualism",
+        answer: "They enforce norms and regulate behavior",
+        rationale: "Institutions like the family, education system, and criminal justice system enforce norms and regulate behavior to control deviance."
     },
     {
-        question: "What is the main characteristic of a secondary group?",
-        choice1: "Intimate and personal interactions",
-        choice2: "Short-term, goal-oriented relationships",
-        choice3: "Emotional attachment",
-        choice4: "Strong kinship ties",
-        answer: "Short-term, goal-oriented relationships",
-        rationale: "Secondary groups are larger, impersonal, and focused on specific tasks or goals."
+        question: "Which of the following is an example of labelling in the context of deviance?",
+        choice1: "A person being praised for conforming to norms",
+        choice2: "A person being called a 'criminal' after committing a crime",
+        choice3: "A person receiving an award for good behavior",
+        choice4: "A person being ignored by society",
+        answer: "A person being called a 'criminal' after committing a crime",
+        rationale: "Labelling involves assigning a deviant identity to an individual, such as calling someone a 'criminal' after they commit a crime."
     },
     {
-        question: "Which type of social organization is characterized by formal rules and hierarchy?",
-        choice1: "Primary group",
-        choice2: "Bureaucracy",
-        choice3: "Reference group",
-        choice4: "Peer group",
-        answer: "Bureaucracy",
-        rationale: "Bureaucracies are structured organizations with set procedures and authority levels."
+        question: "What is the impact of stigmatization on individuals?",
+        choice1: "It promotes social inclusion",
+        choice2: "It leads to social exclusion and marginalization",
+        choice3: "It encourages conformity to norms",
+        choice4: "It eliminates deviant behavior",
+        answer: "It leads to social exclusion and marginalization",
+        rationale: "Stigmatization often leads to social exclusion and marginalization, as individuals are labeled and treated as outsiders."
     },
     {
-        question: "Which of the following is an example of social change?",
-        choice1: "A person getting a new job",
-        choice2: "A new law granting voting rights",
-        choice3: "A family moving to another city",
-        choice4: "A student learning a new language",
-        answer: "A new law granting voting rights",
-        rationale: "Social change refers to shifts in societal norms, institutions, or structures."
+        question: "How do lifestyles influence the control of deviance?",
+        choice1: "They have no impact on deviance",
+        choice2: "They determine biological predispositions to deviance",
+        choice3: "They shape opportunities and behaviors that may be labeled as deviant",
+        choice4: "They eliminate social norms",
+        answer: "They shape opportunities and behaviors that may be labeled as deviant",
+        rationale: "Lifestyles shape opportunities and behaviors, which may be labeled as deviant depending on societal norms and values."
     },
     {
-        question: "Which theory suggests that technological advancements drive social change?",
-        choice1: "Modernization theory",
-        choice2: "Conflict theory",
-        choice3: "Symbolic interactionism",
-        choice4: "Functionalism",
-        answer: "Modernization theory",
-        rationale: "Modernization theory explains how industrial and technological progress shape societies."
+        question: "What is the role of inequality in the social construction of deviance?",
+        choice1: "It eliminates deviant behavior",
+        choice2: "It influences who is labeled as deviant and how deviance is defined",
+        choice3: "It promotes social harmony",
+        choice4: "It encourages conformity to norms",
+        answer: "It influences who is labeled as deviant and how deviance is defined",
+        rationale: "Inequality influences the social construction of deviance by shaping who is labeled as deviant and how deviance is defined and controlled."
     },
     {
-        question: "Which term refers to the process by which a society becomes industrialized and urbanized?",
-        choice1: "Cultural lag",
-        choice2: "Globalization",
-        choice3: "Modernization",
-        choice4: "Socialization",
-        answer: "Modernization",
-        rationale: "Modernization involves technological, economic, and social transformation."
+        question: "Which of the following is an example of formal social control?",
+        choice1: "A parent scolding a child",
+        choice2: "A teacher giving detention",
+        choice3: "A police officer arresting someone",
+        choice4: "A friend giving advice",
+        answer: "A police officer arresting someone",
+        rationale: "Formal social control involves actions taken by authorized institutions, such as a police officer arresting someone."
     },
     {
-        question: "What is cultural lag?",
-        choice1: "When cultural elements spread too quickly",
-        choice2: "When society adopts technology but not the accompanying social norms",
-        choice3: "When a culture rejects external influences",
-        choice4: "When cultures merge into one",
-        answer: "When society adopts technology but not the accompanying social norms",
-        rationale: "Cultural lag occurs when material culture advances faster than social or moral adaptations."
+        question: "What is the role of culture in defining deviance?",
+        choice1: "Culture has no influence on deviance",
+        choice2: "Culture provides a universal definition of deviance",
+        choice3: "Culture shapes what is considered deviant in a society",
+        choice4: "Culture eliminates deviant behavior",
+        answer: "Culture shapes what is considered deviant in a society",
+        rationale: "Culture plays a key role in defining what is considered deviant, as norms and values vary across societies."
     },
     {
-        question: "Which of the following is an example of globalization?",
-        choice1: "A local farmer selling crops at a market",
-        choice2: "A multinational corporation operating in multiple countries",
-        choice3: "A neighborhood organizing a community event",
-        choice4: "A school implementing a new dress code",
-        answer: "A multinational corporation operating in multiple countries",
-        rationale: "Globalization refers to the increasing interconnectedness of the world in trade, culture, and technology."
+        question: "Which of the following is an example of informal social control?",
+        choice1: "A judge sentencing a criminal",
+        choice2: "A parent grounding a child",
+        choice3: "A police officer issuing a ticket",
+        choice4: "A teacher giving a grade",
+        answer: "A parent grounding a child",
+        rationale: "Informal social control involves actions taken by individuals or groups, such as a parent grounding a child."
     },
     {
-        question: "What term describes a movement aimed at achieving social change?",
-        choice1: "Cultural diffusion",
-        choice2: "Social movement",
-        choice3: "Social mobility",
-        choice4: "Institutionalization",
-        answer: "Social mobility",
-        rationale: "Social movements advocate for changes in policies, laws, or cultural practices."
+        question: "What is the primary focus of labelling theory?",
+        choice1: "The biological causes of deviance",
+        choice2: "The economic causes of deviance",
+        choice3: "The social process of labeling individuals as deviant",
+        choice4: "The psychological causes of deviance",
+        answer: "The social process of labeling individuals as deviant",
+        rationale: "Labelling theory focuses on the social process of labeling individuals as deviant and the consequences of such labels."
     },
     {
-        question: "Which of the following is an example of resistance to social change?",
-        choice1: "A government legalizing same-sex marriage",
-        choice2: "A company adopting a four-day workweek",
-        choice3: "A community opposing environmental regulations",
-        choice4: "A school implementing online learning",
-        answer: "A community opposing environmental regulations",
-        rationale: "Resistance to social change occurs when groups actively oppose new policies or cultural shifts."
+        question: "How does socialisation contribute to social control?",
+        choice1: "By encouraging deviant behavior",
+        choice2: "By teaching individuals to conform to societal norms",
+        choice3: "By eliminating social norms",
+        choice4: "By promoting individualism",
+        answer: "By teaching individuals to conform to societal norms",
+        rationale: "Socialisation contributes to social control by teaching individuals to internalize and conform to societal norms."
+    },
+    {
+        question: "What is the relationship between deviance and social norms?",
+        choice1: "Deviance is unrelated to social norms",
+        choice2: "Deviance is defined by the violation of social norms",
+        choice3: "Deviance reinforces social norms",
+        choice4: "Deviance eliminates social norms",
+        answer: "Deviance is defined by the violation of social norms",
+        rationale: "Deviance is defined by the violation of social norms, which are the shared expectations and rules of behavior in a society."
+    },
+    {
+        question: "Which of the following is an example of the social construction of deviance?",
+        choice1: "A universal law against theft",
+        choice2: "Cultural differences in attitudes toward alcohol consumption",
+        choice3: "Biological explanations for criminal behavior",
+        choice4: "Economic theories of deviance",
+        answer: "Cultural differences in attitudes toward alcohol consumption",
+        rationale: "The social construction of deviance is illustrated by cultural differences in attitudes toward behaviors like alcohol consumption."
     }
 ];
     
