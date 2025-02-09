@@ -11,7 +11,7 @@ document.addEventListener("keydown", e => {
 
 
 
-const topic = "Css 103: Deviant Behaviour and Social Control<br> Exam Simulation";
+const topic = "UIL Css 101: Criminal Law<br> Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 100000);
@@ -36,278 +36,277 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
-    {
-        question: "What is the normative basis of society?",
-        choice1: "A set of rules and expectations that guide behavior",
-        choice2: "A system of economic exchange",
-        choice3: "A collection of individual preferences",
-        choice4: "A historical record of events",
-        answer: 1,
-        rationale: "The normative basis of society refers to the shared rules and expectations that guide behavior and maintain social order."
-    },
-    {
-        question: "Which of the following is a primary agent of socialization?",
-        choice1: "Media",
-        choice2: "Family",
-        choice3: "Government",
-        choice4: "Economy",
-        answer: 2,
-        rationale: "Family is considered the primary agent of socialization as it is the first and most influential source of social norms and values."
-    },
-    {
-        question: "What is social control?",
-        choice1: "The regulation of individual behavior by the government",
-        choice2: "The process by which society influences individuals to conform to norms",
-        choice3: "The enforcement of economic policies",
-        choice4: "The study of deviant behavior",
-        answer: 2,
-        rationale: "Social control refers to the mechanisms, strategies, and institutions that societies use to ensure individuals conform to norms."
-    },
-    {
-        question: "Which of the following is an example of deviant behavior?",
-        choice1: "Paying taxes",
-        choice2: "Stealing",
-        choice3: "Voting in elections",
-        choice4: "Attending school",
-        answer: 2,
-        rationale: "Deviant behavior refers to actions that violate social norms, such as stealing."
-    },
-    {
-        question: "What is the social construction of deviance?",
-        choice1: "The idea that deviance is biologically determined",
-        choice2: "The idea that deviance is defined by societal norms and values",
-        choice3: "The idea that deviance is universal across cultures",
-        choice4: "The idea that deviance is unrelated to social context",
-        answer: 2,
-        rationale: "The social construction of deviance refers to the idea that deviance is defined by societal norms and values, which vary across cultures and time."
-    },
-    {
-        question: "What is labelling theory in the context of deviance?",
-        choice1: "The idea that deviance is a result of genetic factors",
-        choice2: "The idea that deviance is a result of economic inequality",
-        choice3: "The idea that deviance is a result of being labeled as deviant by society",
-        choice4: "The idea that deviance is a result of individual choice",
-        answer: 3,
-        rationale: "Labelling theory suggests that individuals become deviant because they are labeled as such by society, which influences their behavior."
-    },
-    {
-        question: "What is stigmatization in the context of deviance?",
-        choice1: "The process of rewarding conforming behavior",
-        choice2: "The process of assigning negative labels to individuals or groups",
-        choice3: "The process of promoting social equality",
-        choice4: "The process of enforcing laws",
-        answer: 2,
-        rationale: "Stigmatization refers to the process of assigning negative labels to individuals or groups, often leading to social exclusion."
-    },
-    {
-        question: "Which of the following is a role of inequality in the control of deviance?",
-        choice1: "It promotes social harmony",
-        choice2: "It creates opportunities for upward mobility",
-        choice3: "It reinforces social hierarchies and power dynamics",
-        choice4: "It eliminates deviant behavior",
-        answer: 3,
-        rationale: "Inequality reinforces social hierarchies and power dynamics, which can influence who is labeled as deviant and how deviance is controlled."
-    },
-    {
-        question: "Which institution is most responsible for formal social control?",
-        choice1: "Family",
-        choice2: "Education system",
-        choice3: "Criminal justice system",
-        choice4: "Media",
-        answer: 3,
-        rationale: "The criminal justice system is responsible for formal social control through laws, regulations, and enforcement mechanisms."
-    },
-    {
-        question: "What is an example of informal social control?",
-        choice1: "Arrest by police",
-        choice2: "Gossip and ridicule",
-        choice3: "Court sentencing",
-        choice4: "Legislation",
-        answer: 2,
-        rationale: "Informal social control includes mechanisms like gossip, ridicule, and social ostracism, which are not formalized but still influence behavior."
-    },
-    {
-        question: "Which of the following is a type of deviant behavior?",
-        choice1: "Conforming to social norms",
-        choice2: "Breaking a law",
-        choice3: "Following religious practices",
-        choice4: "Participating in community events",
-        answer: 2,
-        rationale: "Deviant behavior includes actions that violate social norms, such as breaking a law."
-    },
-    {
-        question: "How does culture influence the control of deviance?",
-        choice1: "By promoting universal norms",
-        choice2: "By defining what is considered deviant",
-        choice3: "By eliminating inequality",
-        choice4: "By enforcing formal laws",
-        answer: 2,
-        rationale: "Culture influences the control of deviance by defining what is considered deviant within a specific societal context."
-    },
-    {
-        question: "What role does gender play in the control of deviance?",
-        choice1: "It has no influence on deviance",
-        choice2: "It determines biological predispositions to deviance",
-        choice3: "It shapes societal expectations and responses to deviance",
-        choice4: "It eliminates deviant behavior",
-        answer: 3,
-        rationale: "Gender shapes societal expectations and responses to deviance, influencing how deviant behavior is perceived and controlled."
-    },
-    {
-        question: "Which of the following is an example of formal social control?",
-        choice1: "Peer pressure",
-        choice2: "Laws and regulations",
-        choice3: "Family discipline",
-        choice4: "Community norms",
-        answer: 2,
-        rationale: "Formal social control includes laws and regulations enforced by institutions like the government and criminal justice system."
-    },
-    {
-        question: "What is the primary purpose of social control?",
-        choice1: "To promote individualism",
-        choice2: "To maintain social order",
-        choice3: "To encourage deviance",
-        choice4: "To eliminate cultural norms",
-        answer: 2,
-        rationale: "The primary purpose of social control is to maintain social order by ensuring individuals conform to societal norms."
-    },
-    {
-        question: "Which of the following is a characteristic of informal social control?",
-        choice1: "It is enforced by the government",
-        choice2: "It relies on social interactions and relationships",
-        choice3: "It involves formal laws and regulations",
-        choice4: "It is applied uniformly across all societies",
-        answer: 2,
-        rationale: "Informal social control relies on social interactions, relationships, and community norms rather than formal laws."
-    },
-    {
-        question: "What is the relationship between socialisation and social control?",
-        choice1: "Socialisation eliminates the need for social control",
-        choice2: "Socialisation teaches individuals to conform to norms, reducing the need for external control",
-        choice3: "Socialisation encourages deviant behavior",
-        choice4: "Socialisation is unrelated to social control",
-        answer: 2,
-        rationale: "Socialisation teaches individuals to internalize societal norms, reducing the need for external social control mechanisms."
-    },
-    {
-        question: "Which of the following is an example of the social construction of deviance?",
-        choice1: "A universal definition of crime",
-        choice2: "Cultural variations in what is considered deviant",
-        choice3: "Biological explanations for deviance",
-        choice4: "Economic theories of deviance",
-        answer: 2,
-        rationale: "The social construction of deviance emphasizes that definitions of deviance vary across cultures and societies."
-    },
-    {
-        question: "What is the role of institutions in the control of deviance?",
-        choice1: "They promote deviant behavior",
-        choice2: "They enforce norms and regulate behavior",
-        choice3: "They eliminate social norms",
-        choice4: "They encourage individualism",
-        answer: 2,
-        rationale: "Institutions like the family, education system, and criminal justice system enforce norms and regulate behavior to control deviance."
-    },
-    {
-        question: "Which of the following is an example of labelling in the context of deviance?",
-        choice1: "A person being praised for conforming to norms",
-        choice2: "A person being called a 'criminal' after committing a crime",
-        choice3: "A person receiving an award for good behavior",
-        choice4: "A person being ignored by society",
-        answer: 2,
-        rationale: "Labelling involves assigning a deviant identity to an individual, such as calling someone a 'criminal' after they commit a crime."
-    },
-    {
-        question: "What is the impact of stigmatization on individuals?",
-        choice1: "It promotes social inclusion",
-        choice2: "It leads to social exclusion and marginalization",
-        choice3: "It encourages conformity to norms",
-        choice4: "It eliminates deviant behavior",
-        answer: 2,
-        rationale: "Stigmatization often leads to social exclusion and marginalization, as individuals are labeled and treated as outsiders."
-    },
-    {
-        question: "How do lifestyles influence the control of deviance?",
-        choice1: "They have no impact on deviance",
-        choice2: "They determine biological predispositions to deviance",
-        choice3: "They shape opportunities and behaviors that may be labeled as deviant",
-        choice4: "They eliminate social norms",
-        answer: 3,
-        rationale: "Lifestyles shape opportunities and behaviors, which may be labeled as deviant depending on societal norms and values."
-    },
-    {
-        question: "What is the role of inequality in the social construction of deviance?",
-        choice1: "It eliminates deviant behavior",
-        choice2: "It influences who is labeled as deviant and how deviance is defined",
-        choice3: "It promotes social harmony",
-        choice4: "It encourages conformity to norms",
-        answer: 2,
-        rationale: "Inequality influences the social construction of deviance by shaping who is labeled as deviant and how deviance is defined and controlled."
-    },
-    {
-        question: "Which of the following is an example of formal social control?",
-        choice1: "A parent scolding a child",
-        choice2: "A teacher giving detention",
-        choice3: "A police officer arresting someone",
-        choice4: "A friend giving advice",
-        answer: 3,
-        rationale: "Formal social control involves actions taken by authorized institutions, such as a police officer arresting someone."
-    },
-    {
-        question: "What is the role of culture in defining deviance?",
-        choice1: "Culture has no influence on deviance",
-        choice2: "Culture provides a universal definition of deviance",
-        choice3: "Culture shapes what is considered deviant in a society",
-        choice4: "Culture eliminates deviant behavior",
-        answer: 3,
-        rationale: "Culture plays a key role in defining what is considered deviant, as norms and values vary across societies."
-    },
-    {
-        question: "Which of the following is an example of informal social control?",
-        choice1: "A judge sentencing a criminal",
-        choice2: "A parent grounding a child",
-        choice3: "A police officer issuing a ticket",
-        choice4: "A teacher giving a grade",
-        answer: 2,
-        rationale: "Informal social control involves actions taken by individuals or groups, such as a parent grounding a child."
-    },
-    {
-        question: "What is the primary focus of labelling theory?",
-        choice1: "The biological causes of deviance",
-        choice2: "The economic causes of deviance",
-        choice3: "The social process of labeling individuals as deviant",
-        choice4: "The psychological causes of deviance",
-        answer: 3,
-        rationale: "Labelling theory focuses on the social process of labeling individuals as deviant and the consequences of such labels."
-    },
-    {
-        question: "How does socialisation contribute to social control?",
-        choice1: "By encouraging deviant behavior",
-        choice2: "By teaching individuals to conform to societal norms",
-        choice3: "By eliminating social norms",
-        choice4: "By promoting individualism",
-        answer: 2,
-        rationale: "Socialisation contributes to social control by teaching individuals to internalize and conform to societal norms."
-    },
-    {
-        question: "What is the relationship between deviance and social norms?",
-        choice1: "Deviance is unrelated to social norms",
-        choice2: "Deviance is defined by the violation of social norms",
-        choice3: "Deviance reinforces social norms",
-        choice4: "Deviance eliminates social norms",
-        answer: 2,
-        rationale: "Deviance is defined by the violation of social norms, which are the shared expectations and rules of behavior in a society."
-    },
-    {
-        question: "Which of the following is an example of the social construction of deviance?",
-        choice1: "A universal law against theft",
-        choice2: "Cultural differences in attitudes toward alcohol consumption",
-        choice3: "Biological explanations for criminal behavior",
-        choice4: "Economic theories of deviance",
-        answer: 2,
-        rationale: "The social construction of deviance is illustrated by cultural differences in attitudes toward behaviors like alcohol consumption."
-    }
+  {
+  question: "Which of the following is NOT an element of crime?",
+    choice1: "Actus Reus",
+    choice2: "Mens Rea",
+    choice3: "Causation",
+    choice4: "Intentional negligence",
+    answer: 4,
+    rationale: "Intentional negligence is not an element of crime. The core elements are Actus Reus (guilty act), Mens Rea (guilty mind), and Causation."
+  },
+  {
+    question: "What does 'Actus Reus' refer to in criminal law?",
+    choice1: "The mental state of the offender",
+    choice2: "The physical act of committing a crime",
+    choice3: "The consequences of the crime",
+    choice4: "The legal defense for the crime",
+    answer: 2,
+    rationale: "Actus Reus refers to the physical act or conduct that constitutes a crime."
+  },
+  {
+    question: "Which of the following best describes 'Mens Rea'?",
+    choice1: "The physical act of committing a crime",
+    choice2: "The intention or knowledge of wrongdoing",
+    choice3: "The legal consequences of a crime",
+    choice4: "The victim's state of mind",
+    answer: 2,
+    rationale: "Mens Rea refers to the mental state or intention to commit a crime."
+  },
+  {
+    question: "What is the primary focus of penology?",
+    choice1: "Defining criminal offenses",
+    choice2: "Punishment and rehabilitation of offenders",
+    choice3: "Investigating crimes",
+    choice4: "Prosecuting criminals",
+    answer: 2,
+    rationale: "Penology is the study of punishment and rehabilitation in the criminal justice system."
+  },
+  {
+    question: "Which historical event significantly influenced the development of Nigeria's criminal law?",
+    choice1: "The American Civil War",
+    choice2: "The colonization by the British",
+    choice3: "The French Revolution",
+    choice4: "The World War II",
+    answer: 2,
+    rationale: "Nigeria's criminal law was heavily influenced by British colonization, which introduced English common law."
+  },
+  {
+    question: "What is the primary purpose of criminal law?",
+    choice1: "To compensate victims",
+    choice2: "To maintain social order and protect society",
+    choice3: "To provide civil remedies",
+    choice4: "To regulate private disputes",
+    answer: 2,
+    rationale: "Criminal law aims to maintain social order and protect society by defining and punishing crimes."
+  },
+  {
+    question: "Which of the following is a key principle of criminal law?",
+    choice1: "Strict liability",
+    choice2: "Vicarious liability",
+    choice3: "Presumption of innocence",
+    choice4: "Civil liability",
+    answer: 3,
+    rationale: "The presumption of innocence is a fundamental principle in criminal law, ensuring that the accused is considered innocent until proven guilty."
+  },
+  {
+    question: "What is the term for a crime punishable by death or life imprisonment?",
+    choice1: "Misdemeanor",
+    choice2: "Felony",
+    choice3: "Infraction",
+    choice4: "Tort",
+    answer: 2,
+    rationale: "A felony is a serious crime that is often punishable by death or life imprisonment."
+  },
+  {
+    question: "Which of the following is an example of a strict liability offense?",
+    choice1: "Murder",
+    choice2: "Speeding",
+    choice3: "Theft",
+    choice4: "Assault",
+    answer: 2,
+    rationale: "Speeding is a strict liability offense because it does not require proof of intent, only the act itself."
+  },
+  {
+    question: "What is the primary goal of rehabilitation in penology?",
+    choice1: "To punish the offender",
+    choice2: "To deter future crimes",
+    choice3: "To reform the offender",
+    choice4: "To compensate the victim",
+    answer: 3,
+    rationale: "Rehabilitation aims to reform the offender and reintegrate them into society as a law-abiding citizen."
+  },
+  {
+    question: "Which of the following is NOT a type of crime?",
+    choice1: "Personal crime",
+    choice2: "Property crime",
+    choice3: "Inchoate crime",
+    choice4: "Civil crime",
+    answer: 4,
+    rationale: "Civil crime is not a recognized category of crime. The main types are personal, property, and inchoate crimes."
+  },
+  {
+    question: "What is the term for a crime that is incomplete or preparatory in nature?",
+    choice1: "Felony",
+    choice2: "Misdemeanor",
+    choice3: "Inchoate crime",
+    choice4: "Strict liability offense",
+    answer: 3,
+    rationale: "Inchoate crimes are incomplete or preparatory acts, such as attempt, conspiracy, or solicitation."
+  },
+  {
+    question: "Which of the following is a key feature of Nigeria's criminal justice system?",
+    choice1: "Reliance on customary law only",
+    choice2: "A combination of English common law and customary law",
+    choice3: "Exclusive use of Sharia law",
+    choice4: "Complete independence from colonial influences",
+    answer: 2,
+    rationale: "Nigeria's criminal justice system combines English common law (from colonization) and customary law."
+  },
+  {
+    question: "What is the primary purpose of deterrence in criminal law?",
+    choice1: "To reform the offender",
+    choice2: "To prevent future crimes by imposing penalties",
+    choice3: "To compensate the victim",
+    choice4: "To rehabilitate the offender",
+    answer: 2,
+    rationale: "Deterrence aims to prevent future crimes by imposing penalties that discourage criminal behavior."
+  },
+  {
+    question: "Which of the following is an example of a property crime?",
+    choice1: "Assault",
+    choice2: "Burglary",
+    choice3: "Murder",
+    choice4: "Perjury",
+    answer: 2,
+    rationale: "Burglary is a property crime because it involves the unlawful entry into a building to commit theft or another felony."
+  },
+  {
+    question: "What is the term for a minor crime, typically punishable by fines or short-term imprisonment?",
+    choice1: "Felony",
+    choice2: "Misdemeanor",
+    choice3: "Inchoate crime",
+    choice4: "Strict liability offense",
+    answer: 2,
+    rationale: "A misdemeanor is a minor crime, usually punishable by fines or short-term imprisonment."
+  },
+  {
+    question: "Which of the following is a key principle of historical development in Nigeria's criminal law?",
+    choice1: "Complete reliance on Sharia law",
+    choice2: "Integration of English common law",
+    choice3: "Exclusive use of customary law",
+    choice4: "Rejection of colonial legal systems",
+    answer: 2,
+    rationale: "Nigeria's criminal law integrates English common law, a legacy of British colonization."
+  },
+  {
+    question: "What is the term for the legal principle that a person cannot be punished for an act that was not a crime at the time it was committed?",
+    choice1: "Double jeopardy",
+    choice2: "Ex post facto",
+    choice3: "Habeas corpus",
+    choice4: "Stare decisis",
+    answer: 2,
+    rationale: "Ex post facto laws prohibit punishing someone for an act that was not a crime when it was committed."
+  },
+  {
+    question: "Which of the following is a key element of causation in criminal law?",
+    choice1: "The offender's intent",
+    choice2: "The victim's consent",
+    choice3: "The link between the act and the harm caused",
+    choice4: "The severity of the punishment",
+    answer: 3,
+    rationale: "Causation requires establishing a direct link between the offender's act and the harm caused."
+  },
+  {
+    question: "What is the term for a legal defense where the accused claims they were forced to commit a crime due to a threat of immediate harm?",
+    choice1: "Insanity defense",
+    choice2: "Duress",
+    choice3: "Entrapment",
+    choice4: "Self-defense",
+    answer: 2,
+    rationale: "Duress is a defense where the accused claims they were forced to commit a crime due to an immediate threat of harm."
+  },
+  {
+    question: "Which of the following is a key feature of Nigeria's penal system?",
+    choice1: "Exclusive use of capital punishment",
+    choice2: "Rehabilitation as the sole focus",
+    choice3: "A combination of punishment and rehabilitation",
+    choice4: "Complete absence of custodial sentences",
+    answer: 3,
+    rationale: "Nigeria's penal system combines punishment and rehabilitation to address criminal behavior."
+  },
+  {
+    question: "What is the term for a crime that involves deception for personal or financial gain?",
+    choice1: "Burglary",
+    choice2: "Fraud",
+    choice3: "Assault",
+    choice4: "Perjury",
+    answer: 2,
+    rationale: "Fraud involves deception for personal or financial gain."
+  },
+  {
+    question: "Which of the following is a key principle of criminal liability?",
+    choice1: "Vicarious liability",
+    choice2: "Strict liability",
+    choice3: "Mens Rea",
+    choice4: "Civil liability",
+    answer: 3,
+    rationale: "Mens Rea, or the guilty mind, is a key principle of criminal liability."
+  },
+  {
+    question: "What is the term for a crime that involves the unlawful killing of another person without premeditation?",
+    choice1: "Murder",
+    choice2: "Manslaughter",
+    choice3: "Assault",
+    choice4: "Battery",
+    answer: 2,
+    rationale: "Manslaughter involves the unlawful killing of another person without premeditation."
+  },
+  {
+    question: "Which of the following is a key feature of Nigeria's criminal procedure?",
+    choice1: "Trial by ordeal",
+    choice2: "Adversarial system",
+    choice3: "Inquisitorial system",
+    choice4: "Exclusive use of Sharia courts",
+    answer: 2,
+    rationale: "Nigeria's criminal procedure follows the adversarial system, inherited from English common law."
+  },
+  {
+    question: "What is the term for a crime that involves intentionally setting fire to property?",
+    choice1: "Burglary",
+    choice2: "Arson",
+    choice3: "Vandalism",
+    choice4: "Trespassing",
+    answer: 2,
+    rationale: "Arson involves the intentional act of setting fire to property."
+  },
+  {
+    question: "Which of the following is a key principle of criminal law regarding punishment?",
+    choice1: "Retribution",
+    choice2: "Compensation",
+    choice3: "Mediation",
+    choice4: "Restitution",
+    answer: 1,
+    rationale: "Retribution is a key principle of criminal law, focusing on punishment as a form of justice."
+  },
+  {
+    question: "What is the term for a crime that involves the unlawful taking of someone else's property with the intent to permanently deprive them of it?",
+    choice1: "Burglary",
+    choice2: "Robbery",
+    choice3: "Theft",
+    choice4: "Fraud",
+    answer: 3,
+    rationale: "Theft involves the unlawful taking of someone else's property with the intent to permanently deprive them of it."
+  },
+  {
+    question: "Which of the following is a key feature of Nigeria's criminal law regarding juvenile offenders?",
+    choice1: "Mandatory life imprisonment",
+    choice2: "Focus on rehabilitation and reform",
+    choice3: "Exclusive use of capital punishment",
+    choice4: "Complete absence of legal protections",
+    answer: 2,
+    rationale: "Nigeria's criminal law emphasizes rehabilitation and reform for juvenile offenders."
+  },
+  {
+    question: "What is the term for a crime that involves the use of force or threat of force to take property from another person?",
+    choice1: "Burglary",
+    choice2: "Robbery",
+    choice3: "Theft",
+    choice4: "Fraud",
+    answer: 2,
+    rationale: "Robbery involves the use of force or threat of force"
+  }
 ];
-
 
 
 
@@ -425,7 +424,7 @@ function displayRemark(remark){
     remarkElement.style.opacity = 0;
   }
 }
-let durationInMinutes = 20;
+let durationInMinutes = 15;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
