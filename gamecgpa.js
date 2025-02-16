@@ -11,7 +11,7 @@ document.addEventListener("keydown", e => {
 
 
 
-const topic = "UIL Css 101: Criminal Law<br> Exam Simulation";
+const topic = "UIL Css 105: <br> Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 100000);
@@ -36,278 +36,277 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 let questions = [
-  {
-  question: "Which of the following is NOT an element of crime?",
-    choice1: "Actus Reus",
-    choice2: "Mens Rea",
-    choice3: "Causation",
-    choice4: "Intentional negligence",
-    answer: 4,
-    rationale: "Intentional negligence is not an element of crime. The core elements are Actus Reus (guilty act), Mens Rea (guilty mind), and Causation."
-  },
-  {
-    question: "What does 'Actus Reus' refer to in criminal law?",
-    choice1: "The mental state of the offender",
-    choice2: "The physical act of committing a crime",
-    choice3: "The consequences of the crime",
-    choice4: "The legal defense for the crime",
-    answer: 2,
-    rationale: "Actus Reus refers to the physical act or conduct that constitutes a crime."
-  },
-  {
-    question: "Which of the following best describes 'Mens Rea'?",
-    choice1: "The physical act of committing a crime",
-    choice2: "The intention or knowledge of wrongdoing",
-    choice3: "The legal consequences of a crime",
-    choice4: "The victim's state of mind",
-    answer: 2,
-    rationale: "Mens Rea refers to the mental state or intention to commit a crime."
-  },
-  {
-    question: "What is the primary focus of penology?",
-    choice1: "Defining criminal offenses",
-    choice2: "Punishment and rehabilitation of offenders",
-    choice3: "Investigating crimes",
-    choice4: "Prosecuting criminals",
-    answer: 2,
-    rationale: "Penology is the study of punishment and rehabilitation in the criminal justice system."
-  },
-  {
-    question: "Which historical event significantly influenced the development of Nigeria's criminal law?",
-    choice1: "The American Civil War",
-    choice2: "The colonization by the British",
-    choice3: "The French Revolution",
-    choice4: "The World War II",
-    answer: 2,
-    rationale: "Nigeria's criminal law was heavily influenced by British colonization, which introduced English common law."
-  },
-  {
-    question: "What is the primary purpose of criminal law?",
-    choice1: "To compensate victims",
-    choice2: "To maintain social order and protect society",
-    choice3: "To provide civil remedies",
-    choice4: "To regulate private disputes",
-    answer: 2,
-    rationale: "Criminal law aims to maintain social order and protect society by defining and punishing crimes."
-  },
-  {
-    question: "Which of the following is a key principle of criminal law?",
-    choice1: "Strict liability",
-    choice2: "Vicarious liability",
-    choice3: "Presumption of innocence",
-    choice4: "Civil liability",
-    answer: 3,
-    rationale: "The presumption of innocence is a fundamental principle in criminal law, ensuring that the accused is considered innocent until proven guilty."
-  },
-  {
-    question: "What is the term for a crime punishable by death or life imprisonment?",
-    choice1: "Misdemeanor",
-    choice2: "Felony",
-    choice3: "Infraction",
-    choice4: "Tort",
-    answer: 2,
-    rationale: "A felony is a serious crime that is often punishable by death or life imprisonment."
-  },
-  {
-    question: "Which of the following is an example of a strict liability offense?",
-    choice1: "Murder",
-    choice2: "Speeding",
-    choice3: "Theft",
-    choice4: "Assault",
-    answer: 2,
-    rationale: "Speeding is a strict liability offense because it does not require proof of intent, only the act itself."
-  },
-  {
-    question: "What is the primary goal of rehabilitation in penology?",
-    choice1: "To punish the offender",
-    choice2: "To deter future crimes",
-    choice3: "To reform the offender",
-    choice4: "To compensate the victim",
-    answer: 3,
-    rationale: "Rehabilitation aims to reform the offender and reintegrate them into society as a law-abiding citizen."
-  },
-  {
-    question: "Which of the following is NOT a type of crime?",
-    choice1: "Personal crime",
-    choice2: "Property crime",
-    choice3: "Inchoate crime",
-    choice4: "Civil crime",
-    answer: 4,
-    rationale: "Civil crime is not a recognized category of crime. The main types are personal, property, and inchoate crimes."
-  },
-  {
-    question: "What is the term for a crime that is incomplete or preparatory in nature?",
-    choice1: "Felony",
-    choice2: "Misdemeanor",
-    choice3: "Inchoate crime",
-    choice4: "Strict liability offense",
-    answer: 3,
-    rationale: "Inchoate crimes are incomplete or preparatory acts, such as attempt, conspiracy, or solicitation."
-  },
-  {
-    question: "Which of the following is a key feature of Nigeria's criminal justice system?",
-    choice1: "Reliance on customary law only",
-    choice2: "A combination of English common law and customary law",
-    choice3: "Exclusive use of Sharia law",
-    choice4: "Complete independence from colonial influences",
-    answer: 2,
-    rationale: "Nigeria's criminal justice system combines English common law (from colonization) and customary law."
-  },
-  {
-    question: "What is the primary purpose of deterrence in criminal law?",
-    choice1: "To reform the offender",
-    choice2: "To prevent future crimes by imposing penalties",
-    choice3: "To compensate the victim",
-    choice4: "To rehabilitate the offender",
-    answer: 2,
-    rationale: "Deterrence aims to prevent future crimes by imposing penalties that discourage criminal behavior."
-  },
-  {
-    question: "Which of the following is an example of a property crime?",
-    choice1: "Assault",
-    choice2: "Burglary",
-    choice3: "Murder",
-    choice4: "Perjury",
-    answer: 2,
-    rationale: "Burglary is a property crime because it involves the unlawful entry into a building to commit theft or another felony."
-  },
-  {
-    question: "What is the term for a minor crime, typically punishable by fines or short-term imprisonment?",
-    choice1: "Felony",
-    choice2: "Misdemeanor",
-    choice3: "Inchoate crime",
-    choice4: "Strict liability offense",
-    answer: 2,
-    rationale: "A misdemeanor is a minor crime, usually punishable by fines or short-term imprisonment."
-  },
-  {
-    question: "Which of the following is a key principle of historical development in Nigeria's criminal law?",
-    choice1: "Complete reliance on Sharia law",
-    choice2: "Integration of English common law",
-    choice3: "Exclusive use of customary law",
-    choice4: "Rejection of colonial legal systems",
-    answer: 2,
-    rationale: "Nigeria's criminal law integrates English common law, a legacy of British colonization."
-  },
-  {
-    question: "What is the term for the legal principle that a person cannot be punished for an act that was not a crime at the time it was committed?",
-    choice1: "Double jeopardy",
-    choice2: "Ex post facto",
-    choice3: "Habeas corpus",
-    choice4: "Stare decisis",
-    answer: 2,
-    rationale: "Ex post facto laws prohibit punishing someone for an act that was not a crime when it was committed."
-  },
-  {
-    question: "Which of the following is a key element of causation in criminal law?",
-    choice1: "The offender's intent",
-    choice2: "The victim's consent",
-    choice3: "The link between the act and the harm caused",
-    choice4: "The severity of the punishment",
-    answer: 3,
-    rationale: "Causation requires establishing a direct link between the offender's act and the harm caused."
-  },
-  {
-    question: "What is the term for a legal defense where the accused claims they were forced to commit a crime due to a threat of immediate harm?",
-    choice1: "Insanity defense",
-    choice2: "Duress",
-    choice3: "Entrapment",
-    choice4: "Self-defense",
-    answer: 2,
-    rationale: "Duress is a defense where the accused claims they were forced to commit a crime due to an immediate threat of harm."
-  },
-  {
-    question: "Which of the following is a key feature of Nigeria's penal system?",
-    choice1: "Exclusive use of capital punishment",
-    choice2: "Rehabilitation as the sole focus",
-    choice3: "A combination of punishment and rehabilitation",
-    choice4: "Complete absence of custodial sentences",
-    answer: 3,
-    rationale: "Nigeria's penal system combines punishment and rehabilitation to address criminal behavior."
-  },
-  {
-    question: "What is the term for a crime that involves deception for personal or financial gain?",
-    choice1: "Burglary",
-    choice2: "Fraud",
-    choice3: "Assault",
-    choice4: "Perjury",
-    answer: 2,
-    rationale: "Fraud involves deception for personal or financial gain."
-  },
-  {
-    question: "Which of the following is a key principle of criminal liability?",
-    choice1: "Vicarious liability",
-    choice2: "Strict liability",
-    choice3: "Mens Rea",
-    choice4: "Civil liability",
-    answer: 3,
-    rationale: "Mens Rea, or the guilty mind, is a key principle of criminal liability."
-  },
-  {
-    question: "What is the term for a crime that involves the unlawful killing of another person without premeditation?",
-    choice1: "Murder",
-    choice2: "Manslaughter",
-    choice3: "Assault",
-    choice4: "Battery",
-    answer: 2,
-    rationale: "Manslaughter involves the unlawful killing of another person without premeditation."
-  },
-  {
-    question: "Which of the following is a key feature of Nigeria's criminal procedure?",
-    choice1: "Trial by ordeal",
-    choice2: "Adversarial system",
-    choice3: "Inquisitorial system",
-    choice4: "Exclusive use of Sharia courts",
-    answer: 2,
-    rationale: "Nigeria's criminal procedure follows the adversarial system, inherited from English common law."
-  },
-  {
-    question: "What is the term for a crime that involves intentionally setting fire to property?",
-    choice1: "Burglary",
-    choice2: "Arson",
-    choice3: "Vandalism",
-    choice4: "Trespassing",
-    answer: 2,
-    rationale: "Arson involves the intentional act of setting fire to property."
-  },
-  {
-    question: "Which of the following is a key principle of criminal law regarding punishment?",
-    choice1: "Retribution",
-    choice2: "Compensation",
-    choice3: "Mediation",
-    choice4: "Restitution",
-    answer: 1,
-    rationale: "Retribution is a key principle of criminal law, focusing on punishment as a form of justice."
-  },
-  {
-    question: "What is the term for a crime that involves the unlawful taking of someone else's property with the intent to permanently deprive them of it?",
-    choice1: "Burglary",
-    choice2: "Robbery",
-    choice3: "Theft",
-    choice4: "Fraud",
-    answer: 3,
-    rationale: "Theft involves the unlawful taking of someone else's property with the intent to permanently deprive them of it."
-  },
-  {
-    question: "Which of the following is a key feature of Nigeria's criminal law regarding juvenile offenders?",
-    choice1: "Mandatory life imprisonment",
-    choice2: "Focus on rehabilitation and reform",
-    choice3: "Exclusive use of capital punishment",
-    choice4: "Complete absence of legal protections",
-    answer: 2,
-    rationale: "Nigeria's criminal law emphasizes rehabilitation and reform for juvenile offenders."
-  },
-  {
-    question: "What is the term for a crime that involves the use of force or threat of force to take property from another person?",
-    choice1: "Burglary",
-    choice2: "Robbery",
-    choice3: "Theft",
-    choice4: "Fraud",
-    answer: 2,
-    rationale: "Robbery involves the use of force or threat of force"
-  }
+    {
+        question: "What is the meaning of social problems?",
+        choice1: "Issues that affect a small group of people",
+        choice2: "Issues that are universally accepted as harmful",
+        choice3: "Conditions or behaviors that negatively affect a large number of people and are recognized as needing solutions",
+        choice4: "Problems that only occur in developing countries",
+        answer: 3,
+        rationale: "Social problems are conditions or behaviors that have negative consequences for a significant portion of the population and are widely recognized as needing to be addressed."
+    },
+    {
+        question: "Which of the following is NOT an approach to understanding social problems?",
+        choice1: "Functionalist approach",
+        choice2: "Conflict approach",
+        choice3: "Symbolic interactionist approach",
+        choice4: "Isolationist approach",
+        answer: 4,
+        rationale: "The isolationist approach is not a recognized sociological perspective for understanding social problems."
+    },
+    {
+        question: "Which sociological theory emphasizes the role of power and inequality in understanding social problems?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Feminist theory",
+        answer: 2,
+        rationale: "Conflict theory focuses on how power dynamics and inequalities contribute to social problems."
+    },
+    {
+        question: "Which type of social problem involves the illegal trade of humans for exploitation?",
+        choice1: "Cybercrime",
+        choice2: "Drug trafficking",
+        choice3: "Human trafficking",
+        choice4: "Electoral violence",
+        answer: 3,
+        rationale: "Human trafficking specifically refers to the illegal trade of humans for purposes such as forced labor or sexual exploitation."
+    },
+    {
+        question: "What is a common solution to reducing poverty?",
+        choice1: "Increasing taxes on the poor",
+        choice2: "Providing access to education and job training",
+        choice3: "Reducing social welfare programs",
+        choice4: "Encouraging urbanization",
+        answer: 2,
+        rationale: "Providing access to education and job training helps individuals gain skills and opportunities to escape poverty."
+    },
+    {
+        question: "Which of the following is an example of a social problem caused by technological advancement?",
+        choice1: "Poverty",
+        choice2: "Cybercrime",
+        choice3: "Unemployment",
+        choice4: "Drug trafficking",
+        answer: 2,
+        rationale: "Cybercrime is a social problem that has emerged due to the rise of technology and the internet."
+    },
+    {
+        question: "Which sociological theory focuses on how individuals interpret and give meaning to social problems?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Feminist theory",
+        answer: 3,
+        rationale: "Symbolic interactionism examines how individuals interpret and assign meaning to social issues through interactions."
+    },
+    {
+        question: "What is a major cause of electoral violence?",
+        choice1: "High voter turnout",
+        choice2: "Political instability and competition",
+        choice3: "Strong democratic institutions",
+        choice4: "Equal distribution of resources",
+        answer: 2,
+        rationale: "Electoral violence often arises from political instability and intense competition for power."
+    },
+    {
+        question: "Which of the following is a consequence of unemployment?",
+        choice1: "Increased economic growth",
+        choice2: "Higher rates of poverty and crime",
+        choice3: "Improved mental health",
+        choice4: "Reduced social inequality",
+        answer: 2,
+        rationale: "Unemployment often leads to poverty and can increase crime rates due to lack of economic opportunities."
+    },
+    {
+        question: "Which approach to social problems focuses on how institutions work together to maintain societal stability?",
+        choice1: "Conflict approach",
+        choice2: "Functionalist approach",
+        choice3: "Symbolic interactionist approach",
+        choice4: "Feminist approach",
+        answer: 2,
+        rationale: "The functionalist approach examines how different parts of society work together to maintain stability and order."
+    },
+    {
+        question: "What is a key characteristic of drug trafficking as a social problem?",
+        choice1: "It only affects rural areas",
+        choice2: "It is a global issue with widespread consequences",
+        choice3: "It has no connection to organized crime",
+        choice4: "It is easily eradicated through legal measures",
+        answer: 2,
+        rationale: "Drug trafficking is a global issue that involves organized crime and has far-reaching social and economic impacts."
+    },
+    {
+        question: "Which of the following is a solution to cybercrime?",
+        choice1: "Reducing internet access",
+        choice2: "Strengthening cybersecurity measures",
+        choice3: "Encouraging anonymous online activities",
+        choice4: "Ignoring digital privacy concerns",
+        answer: 2,
+        rationale: "Strengthening cybersecurity measures is a practical solution to combat cybercrime and protect individuals and organizations."
+    },
+    {
+        question: "Which sociological theory highlights the role of gender in understanding social problems?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Feminist theory",
+        answer: 4,
+        rationale: "Feminist theory focuses on how gender inequalities contribute to social problems."
+    },
+    {
+        question: "What is a common cause of poverty?",
+        choice1: "High levels of education",
+        choice2: "Lack of access to resources and opportunities",
+        choice3: "Strong social welfare systems",
+        choice4: "Low population growth",
+        answer: 2,
+        rationale: "Poverty is often caused by a lack of access to resources, education, and economic opportunities."
+    },
+    {
+        question: "Which of the following is an example of a structural solution to social problems?",
+        choice1: "Providing individual counseling",
+        choice2: "Implementing policy changes to address inequality",
+        choice3: "Encouraging personal responsibility",
+        choice4: "Promoting charity events",
+        answer: 2,
+        rationale: "Structural solutions involve systemic changes, such as policy reforms, to address the root causes of social problems."
+    },
+    {
+        question: "Which type of social problem involves the use of violence to influence election outcomes?",
+        choice1: "Cybercrime",
+        choice2: "Drug trafficking",
+        choice3: "Electoral violence",
+        choice4: "Human trafficking",
+        answer: 3,
+        rationale: "Electoral violence refers to the use of force or intimidation to influence the electoral process."
+    },
+    {
+        question: "What is a key factor in addressing unemployment?",
+        choice1: "Reducing access to education",
+        choice2: "Creating job opportunities and skill development programs",
+        choice3: "Increasing automation in industries",
+        choice4: "Encouraging early retirement",
+        answer: 2,
+        rationale: "Creating job opportunities and providing skill development programs are essential for reducing unemployment."
+    },
+    {
+        question: "Which of the following is a consequence of human trafficking?",
+        choice1: "Economic growth",
+        choice2: "Violation of human rights",
+        choice3: "Improved international relations",
+        choice4: "Reduced crime rates",
+        answer: 2,
+        rationale: "Human trafficking violates the basic human rights of individuals, leading to exploitation and abuse."
+    },
+    {
+        question: "Which approach to social problems emphasizes the importance of social change and activism?",
+        choice1: "Functionalist approach",
+        choice2: "Conflict approach",
+        choice3: "Symbolic interactionist approach",
+        choice4: "Feminist approach",
+        answer: 2,
+        rationale: "The conflict approach advocates for social change and activism to address inequalities and injustices."
+    },
+    {
+        question: "What is a major challenge in solving social problems?",
+        choice1: "Lack of awareness",
+        choice2: "Overabundance of resources",
+        choice3: "Universal agreement on solutions",
+        choice4: "Absence of government involvement",
+        answer: 1,
+        rationale: "A lack of awareness and understanding of social problems can hinder efforts to address them effectively."
+    },
+    {
+        question: "Which of the following is an example of a cultural solution to social problems?",
+        choice1: "Changing societal attitudes and norms",
+        choice2: "Implementing stricter laws",
+        choice3: "Increasing police presence",
+        choice4: "Building more prisons",
+        answer: 1,
+        rationale: "Cultural solutions involve changing societal attitudes, beliefs, and norms to address social problems."
+    },
+    {
+        question: "Which sociological theory views social problems as a result of the breakdown of societal norms?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Feminist theory",
+        answer: 1,
+        rationale: "Functionalism sees social problems as arising from the breakdown of societal norms and institutions."
+    },
+    {
+        question: "What is a common characteristic of social problems?",
+        choice1: "They affect only individuals",
+        choice2: "They are easily solved without collective effort",
+        choice3: "They have widespread societal impact",
+        choice4: "They are unrelated to economic factors",
+        answer: 3,
+        rationale: "Social problems typically have a broad impact on society and require collective efforts to address."
+    },
+    {
+        question: "Which of the following is a solution to electoral violence?",
+        choice1: "Encouraging voter suppression",
+        choice2: "Promoting free and fair elections",
+        choice3: "Increasing political polarization",
+        choice4: "Limiting access to information",
+        answer: 2,
+        rationale: "Promoting free and fair elections helps reduce electoral violence by ensuring transparency and accountability."
+    },
+    {
+        question: "Which type of social problem is characterized by the illegal distribution of controlled substances?",
+        choice1: "Cybercrime",
+        choice2: "Drug trafficking",
+        choice3: "Human trafficking",
+        choice4: "Poverty",
+        answer: 2,
+        rationale: "Drug trafficking involves the illegal production, distribution, and sale of controlled substances."
+    },
+    {
+        question: "What is a key step in addressing social problems?",
+        choice1: "Ignoring the issues",
+        choice2: "Identifying root causes",
+        choice3: "Blaming individuals",
+        choice4: "Avoiding collective action",
+        answer: 2,
+        rationale: "Identifying the root causes of social problems is essential for developing effective solutions."
+    },
+    {
+        question: "Which of the following is an example of a social problem related to technology?",
+        choice1: "Poverty",
+        choice2: "Unemployment",
+        choice3: "Cyberbullying",
+        choice4: "Human trafficking",
+        answer: 3,
+        rationale: "Cyberbullying is a social problem that has emerged with the rise of digital communication technologies."
+    },
+    {
+        question: "Which sociological theory focuses on the role of communication and interaction in shaping social problems?",
+        choice1: "Functionalism",
+        choice2: "Conflict theory",
+        choice3: "Symbolic interactionism",
+        choice4: "Feminist theory",
+        answer: 3,
+        rationale: "Symbolic interactionism emphasizes how communication and interaction influence the perception and construction of social problems."
+    },
+    {
+        question: "What is a major consequence of poverty?",
+        choice1: "Improved health outcomes",
+        choice2: "Increased access to education",
+        choice3: "Limited access to basic needs",
+        choice4: "Reduced social inequality",
+        answer: 3,
+        rationale: "Poverty often leads to limited access to basic needs such as food, shelter, and healthcare."
+    },
+    {
+        question: "Which of the following is a solution to human trafficking?",
+        choice1: "Increasing demand for cheap labor",
+        choice2: "Strengthening international cooperation and laws",
+        choice3: "Reducing awareness campaigns",
+        choice4: "Ignoring the issue",
+        answer: 2,
+        rationale: "Strengthening international cooperation and enforcing laws are critical steps in combating human trafficking."
+    }
 ];
-
 
 
 
