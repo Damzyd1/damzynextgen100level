@@ -11,7 +11,7 @@ document.addEventListener("keydown", e => {
 
 
 
-const topic = "UIL Css 105: <br> Exam Simulation";
+const topic = "GST 111 <br> Exam Simulation";
 const topicId = document.getElementById("topic");
 topicId.innerHTML = topic;
 setTimeout(disappear, 100000);
@@ -998,7 +998,7 @@ function displayRemark(remark){
     remarkElement.style.opacity = 0;
   }
 }
-let durationInMinutes = 15;
+let durationInMinutes = 35;
 let timeInSeconds = durationInMinutes * 60;
 const timerDisplay = document.getElementById("timer");
 
